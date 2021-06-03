@@ -1,0 +1,123 @@
+@import '../../bootstrap/scss/bootstrap.scss';
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  // md: 768px,
+  md: 825px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$hn-dark-orange: #FF6600;
+$hn-text-dark: black;
+$hn-text-light: white;
+$hn-beige: #F6F6EF;
+
+// .item:last-child {
+//   margin-bottom: 0;
+// }
+
+.hacker-news {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+header {
+  padding: 0 2px;
+}
+
+.hn-logo {
+  margin-right: 6px;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: $hn-dark-orange;
+}
+
+main {
+  background: $hn-beige;
+}
+
+footer {
+  background: $hn-beige;
+}
+
+
+.comment-text p:last-child {
+  margin-bottom: 0;
+}
+
+.comment-text a {
+  color: $hn-text-dark;
+}
+
+.more {
+  margin: 16px 0;
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: $hn-text-dark;
+  text-decoration: none;
+  font-family: "Verdana", sans-serif
+}
+
+.more:hover {
+  color: $hn-text-dark;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 250px) {
+  .wrapper {
+    min-width: 820px;
+    margin: 12px;
+  }
+}
+
+@media only screen and (min-width: 250px) and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  .hacker-news {
+    font-size: 17px;
+  }
+
+  nav, .login {
+    font-size: 14px;
+  }
+
+  header {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .hn-menu {
+    line-height: 1.12em;
+  }
+
+  .hn-logo {
+    margin-right: 12px;
+  }
+
+  .more {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    min-width: calc(768px - 12px * 2);
+    width: 80%;
+    margin: 12px auto;
+  }
+
+  nav {
+    font-size: 16px;
+  }
+}
